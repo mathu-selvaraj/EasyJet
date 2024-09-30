@@ -24,4 +24,4 @@ jobs:
 
     - name: Build with Maven
       run: mvn clean test -X
-      working-directory: ciam-cucumber-test/ciam-functional-automation-test/pom.xml
+      working-directory: ./
