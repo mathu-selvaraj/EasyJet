@@ -29,5 +29,5 @@ jobs:
     - name: Run Cucumber tests
       run: mvn test  # Adjust based on your build tool
 
-    - name: Generate HTML report
-      run: mvn site  # If using Maven site plugin for reports
+    #- name: Generate HTML report
+     # run: mvn site  # If using Maven site plugin for reports
