@@ -21,7 +21,17 @@ jobs:
       with:
         java-version: '11'
         distribution: 'adopt'
+    - name: Install dependencies
+      run: |
+        # For Maven projects
+        mvn install
 
     - name: Build with Maven
       run: mvn clean test -X
       working-directory: ./
+      
+    - name: Run Cucumber tests
+      run: mvn test  # Adjust based on your build tool
+
+    - name: Generate HTML report
+      run: mvn site  # If using Maven site plugin for reports
