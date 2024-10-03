@@ -3,10 +3,10 @@ name: Run Cucumber Tests
 on:
   push:
     branches:
-      - main
+      - '*'
   pull_request:
     branches:
-      - main
+      - '*'
   schedule:
     - cron: '32 15 3 10 4'  # This will run the workflow every day at midnight UTC
 
@@ -30,6 +30,10 @@ jobs:
       
     - name: Run Cucumber tests
       run: mvn test  # Adjust based on your build tool
+
+    - name: Set Branch Name
+      id: set_branch
+      run: echo "BRANCH_NAME=$(echo ${GITHUB_REF#refs/heads/})" >> $GITHUB_ENV
 
     - name: List target directory for debugging
       run: ls -R target/
