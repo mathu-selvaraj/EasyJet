@@ -307,7 +307,8 @@
                         <configuration>
                             <outputDirectory>target/cucumber-reports</outputDirectory>
                             <projectName>EasyJet</projectName>
-                            <cucumberOutput>target/cucumber-reports/Cucumber.json</cucumberOutput>
+                           <!-- <cucumberOutput>target/cucumber.json</cucumberOutput> -->
+                            <cucumberOutput>target/cucumber-html-reports</cucumberOutput>
                         </configuration>
                     </execution>
                 </executions>
