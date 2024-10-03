@@ -34,7 +34,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: cucumber-reports
-        path: target/cucumber-reports/
+        path: target/cucumber-reports/Cucumber.json
 
 
     #- name: Generate HTML report
