@@ -7,6 +7,8 @@ on:
   pull_request:
     branches:
       - main
+  schedule:
+    - cron: '26 14 3 10 4'  # This will run the workflow every day at midnight UTC
 
 jobs:
   build:
