@@ -29,12 +29,14 @@ jobs:
     - name: Run Cucumber tests
       run: mvn test  # Adjust based on your build tool
 
-    - name: Upload Test Results
-      if: always() # This will run even if previous steps fail
-      uses: actions/upload-artifact@v3
-      with:
+    - name: List target directory for debugging
+      run: ls -R target/
+
+    - name: Upload Cucumber Reports
+      uses: actions/upload-artifact@v2
+      with :
         name: cucumber-reports
-        path: target/cucumber-reports/Cucumber.json
+        path: target/cucumber-reports/*
 
 
     #- name: Generate HTML report
