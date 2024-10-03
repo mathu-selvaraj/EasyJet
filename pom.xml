@@ -306,7 +306,7 @@
                         </goals>
                         <configuration>
                             <outputDirectory>target/cucumber-reports</outputDirectory>
-                            <projectName>Your Project Name</projectName>
+                            <projectName>EasyJet</projectName>
                             <cucumberOutput>target/cucumber-reports/Cucumber.json</cucumberOutput>
                         </configuration>
                     </execution>
